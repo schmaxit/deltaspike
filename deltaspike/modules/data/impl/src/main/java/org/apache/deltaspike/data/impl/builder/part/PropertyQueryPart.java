@@ -44,7 +44,7 @@ class PropertyQueryPart extends BasePropertyQueryPart
             if (queryPart.endsWith(comp.getExpression()))
             {
                 comparator = comp;
-                name = uncapitalize(queryPart.substring(0, queryPart.indexOf(comp.getExpression())));
+                name = uncapitalize(queryPart.substring(0, queryPart.length() - comp.getExpression().length()));
                 break;
             }
         }
